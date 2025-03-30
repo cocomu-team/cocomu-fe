@@ -1,5 +1,36 @@
 # COCOMU 프론트 팀 기술 문서
 
+<hr style="height:1px; background:#ccc; border:none;" />
+
+<br />
+
+## 🗓️ 개발 기간
+
+MVP 개발: 2025.02.24 ~ 2025.03.17
+
+현재: 기능 확장 및 유지보수 진행 중
+
+<br />
+
+<br />
+
+## 🛠️ Frontend Tech Stack
+
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![TanStack Query](https://img.shields.io/badge/TanStack%20Query-FF4154?style=for-the-badge&logo=react-query&logoColor=white)
+![Zustand](https://img.shields.io/badge/Zustand-8E44AD?style=for-the-badge)
+![Emotion](https://img.shields.io/badge/Emotion-C764EB?style=for-the-badge)
+![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
+![Prettier](https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black)
+![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge)
+![Sentry](https://img.shields.io/badge/Sentry-362D59?style=for-the-badge&logo=sentry&logoColor=white)
+![Storybook](https://img.shields.io/badge/Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white)
+
+<br />
+
+<br />
 
 ## ✍️ 코코무 개발 이야기
 
