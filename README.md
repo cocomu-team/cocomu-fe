@@ -104,5 +104,5 @@ MVP 개발 단계에서는 JIRA 이슈 트래킹 도구를 함께 사용했기 �
 
 ### 💅 코드 컨벤션
 
-코드는 기본적으로 Airbnb JavaScript & React 스타일 가이드를 따르고 있으며,
+코드는 기본적으로 Airbnb JavaScript 스타일 가이드를 따르고 있으며,
 ESLint + Prettier를 설정하여 일관된 스타일을 유지하고 있습니다.
