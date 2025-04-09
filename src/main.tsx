@@ -25,10 +25,6 @@ if (import.meta.env.MODE === 'development') {
   });
 }
 
-setTimeout(() => {
-  throw new Error('🔥 테스트용 에러입니다!');
-}, 1000);
-
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
