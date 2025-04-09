@@ -21,6 +21,7 @@
     "@tanstack/react-query-devtools": "^5.66.0",
     "axios": "^1.7.9",
     "dayjs": "^1.11.13",
+    "gpt-error-analyzer": "^1.0.1",
     "lodash": "^4.17.21",
     "monaco-editor": "^0.52.2",
     "prop-types": "^15.8.1",
