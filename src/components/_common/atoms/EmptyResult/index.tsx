@@ -1,4 +1,4 @@
-import { EMPTY_RESULT_IMAGES } from '@constants/common';
+import { EMPTY_RESULT_IMAGES } from '@constants/common/image';
 import S from './style';
 
 interface EmptyResultProps {

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { BsCamera } from 'react-icons/bs';
+import { DEFAULT_PROFILE_IMAGE } from '@constants/common/image';
 import useUploadUserImage from '@hooks/user/useUploadUserImage';
-import { DEFAULT_PROFILE_IMAGE } from '@constants/common';
 import Icon from '../Icon';
 import S, { ProfileImageStyleProps } from './style';
 

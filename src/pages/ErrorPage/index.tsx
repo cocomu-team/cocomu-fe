@@ -1,7 +1,8 @@
 import { useNavigate } from 'react-router-dom';
-import IconButton from '@components/_common/atoms/IconButton';
-import { ERROR_IMAGE } from '@constants/common';
 import { BsArrowLeft } from 'react-icons/bs';
+import { ERROR_IMAGE } from '@constants/common/image';
+import IconButton from '@components/_common/atoms/IconButton';
+
 import S from './style';
 
 export default function ErrorPage() {

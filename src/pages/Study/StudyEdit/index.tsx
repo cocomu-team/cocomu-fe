@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { ACCESS_STATUS, ACCESS_STATUS_MAP_REVERSE } from '@constants/common';
+import { ACCESS_STATUS, ACCESS_STATUS_MAP_REVERSE } from '@constants/common/ui';
 import { CreateStudyData, StudyFormData } from '@customTypes/study';
 
 import useEditStudy from '@hooks/study/useEditStudy';

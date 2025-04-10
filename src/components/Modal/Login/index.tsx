@@ -1,7 +1,7 @@
 import { BsXLg } from 'react-icons/bs';
 import Icon from '@components/_common/atoms/Icon';
-import { GITHUB_IMAGE, GOOGLE_IMAGE, KAKAO_IMAGE, LOGO_IMAGE } from '@constants/common';
 import { LoginProps } from '@customTypes/modal';
+import { GITHUB_IMAGE, GOOGLE_IMAGE, KAKAO_IMAGE, LOGO_IMAGE } from '@constants/common/image';
 import { GITHUB_AUTH_API_URL, GOOGLE_AUTH_API_URL, KAKAO_AUTH_API_URL } from '@constants/api';
 import { useToastStore } from '@stores/useToastStore';
 import S from './style';

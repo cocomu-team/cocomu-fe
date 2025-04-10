@@ -10,7 +10,7 @@ import UserProfile from '@components/_common/molecules/UserProfile';
 import DropdownItem from '@components/_common/atoms/DropdownItem';
 import Tag from '@components/_common/atoms/Tag';
 
-import { SPACE_EDIT_DROPDOWN_LABELS, STEP_INFO } from '@constants/common';
+import { SPACE_EDIT_DROPDOWN_LABELS, STEP_INFO } from '@constants/common/ui';
 
 import S from './style';
 

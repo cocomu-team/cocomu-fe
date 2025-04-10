@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import useGetStudyList from '@hooks/study/useGetStudyList';
+import { BANNER_IMAGES } from '@constants/common/image';
+import { ACCESS_STATUS_MAP_ID, STUDY_PAGE_SIZE } from '@constants/common/ui';
 import { StudyData } from '@customTypes/study';
-import { ACCESS_STATUS_MAP_ID, STUDY_PAGE_SIZE, IMAGEURLS } from '@constants/common';
 import PageButton from 'src/components/_common/molecules/PageButton';
 import StudyCard from 'src/components/Study/StudyCard';
 import Loading from '@pages/Loading';
@@ -36,7 +37,7 @@ export default function StudyList() {
 
   return (
     <S.Container>
-      <Slider images={IMAGEURLS} />
+      <Slider images={BANNER_IMAGES} />
       <StudyFilterTab
         filters={filters}
         keyword={keyword}
