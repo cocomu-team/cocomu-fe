@@ -12,7 +12,8 @@ import DropdownItem from '@components/_common/atoms/DropdownItem';
 import { UserData } from '@customTypes/user';
 
 import { ROUTES } from '@constants/path';
-import { LOGO_IMAGE, NAVBAR_DROPDOWN_LABELS } from '@constants/common';
+import { LOGO_IMAGE } from '@constants/common/image';
+import { NAVBAR_DROPDOWN_LABELS } from '@constants/common/ui';
 import { ACCESS_TOKEN_KEY } from '@constants/api';
 
 import { useModalStore } from '@stores/useModalStore';

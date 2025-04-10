@@ -1,8 +1,9 @@
 import { BsPerson } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 
-import { ACCESS_STATUS_MAP } from '@constants/common';
 import { ROUTES } from '@constants/path';
+import { ACCESS_STATUS_MAP } from '@constants/common/ui';
+
 import { StudyData } from '@customTypes/study';
 
 import { formatDate } from '@utils/formatDate';

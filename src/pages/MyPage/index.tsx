@@ -11,7 +11,7 @@ import Button from '@components/_common/atoms/Button';
 
 import Loading from '@pages/Loading';
 
-import { MYPAGE_TAB } from '@constants/common';
+import { MYPAGE_TAB } from '@constants/common/ui';
 
 import S from './style';
 

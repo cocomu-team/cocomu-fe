@@ -1,4 +1,4 @@
-import { LOADING_IMAGE } from '@constants/common';
+import { LOADING_IMAGE } from '@constants/common/image';
 import S from './style';
 
 export default function Loading() {

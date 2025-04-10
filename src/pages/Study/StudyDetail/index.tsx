@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Outlet, useNavigate, useParams, useLocation } from 'react-router-dom';
 
-import { STUDY_TABS } from '@constants/common';
+import { STUDY_TABS } from '@constants/common/ui';
 import { ROUTES } from '@constants/path';
 
 import useGetStudyDetail from '@hooks/study/useGetStudyDetail';

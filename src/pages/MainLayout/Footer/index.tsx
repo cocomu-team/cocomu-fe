@@ -1,5 +1,6 @@
 import FooterLabel from '@pages/MainLayout/Footer/FooterLabel';
-import { LOGO_IMAGE, MENU_LIST } from '@constants/common';
+import { LOGO_IMAGE } from '@constants/common/image';
+import { MENU_LIST } from '@constants/common/ui';
 import S from './style';
 
 export default function Footer() {

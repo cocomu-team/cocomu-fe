@@ -1,4 +1,4 @@
-import { DEFAULT_LANGUAGE_IMAGE } from '@constants/common';
+import { DEFAULT_LANGUAGE_IMAGE } from '@constants/common/image';
 import S from './style';
 
 interface ImageTagProps {
