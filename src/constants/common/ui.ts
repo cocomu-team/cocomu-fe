@@ -1,15 +1,3 @@
-export const LOGO_IMAGE = 'https://cdn.cocomu.co.kr/images/default/Logo.png' as const;
-export const ERROR_IMAGE = 'https://cdn.cocomu.co.kr/images/default/errorImg.png' as const;
-export const LOADING_IMAGE = 'https://cdn.cocomu.co.kr/images/default/Loading.png' as const;
-
-export const GOOGLE_IMAGE = 'https://cdn.cocomu.co.kr/images/default/google.png' as const;
-export const GITHUB_IMAGE = 'https://cdn.cocomu.co.kr/images/default/github.png' as const;
-export const KAKAO_IMAGE = 'https://cdn.cocomu.co.kr/images/default/kakao.png' as const;
-
-export const DEFAULT_LANGUAGE_IMAGE = 'https://cdn.cocomu.co.kr/images/languages/java.png' as const;
-
-export const DEFAULT_PROFILE_IMAGE = 'https://cdn.cocomu.co.kr/images/default/profile.png' as const;
-
 export const STUDY_PAGE_SIZE = 12 as const;
 
 export const STUDY_TABS = ['코딩 스페이스', '멤버 보기', '스터디 정보'] as const;
@@ -25,12 +13,6 @@ export const STUDY_EDIT_DROPDOWN_LABELS = [
 ] as const;
 
 export const SPACE_EDIT_DROPDOWN_LABELS = [{ label: '삭제하기', color: 'triadic' }] as const;
-
-export const IMAGEURLS = [
-  'https://cdn.cocomu.co.kr/images/Banner/Banner1.png',
-  'https://cdn.cocomu.co.kr/images/Banner/Banner2.png',
-  'https://cdn.cocomu.co.kr/images/Banner/Banner3.png',
-];
 
 export const ACCESS_STATUS = [
   {
@@ -132,8 +114,3 @@ export const STEP_LABELS = Object.values(STEP_INFO).map((item) => item.label);
 export const MYPAGE_TAB = ['참여한 스터디 보기', '참여한 코딩 스페이스 보기'] as const;
 
 export const MENU_LIST = ['이용약관', '개인정보처리방침', '서비스 소개', '문의하기'] as const;
-
-export const EMPTY_RESULT_IMAGES = [
-  'https://cdn.cocomu.co.kr/images/default/empty_study.png',
-  'https://cdn.cocomu.co.kr/images/default/empty_space.png',
-] as const;
