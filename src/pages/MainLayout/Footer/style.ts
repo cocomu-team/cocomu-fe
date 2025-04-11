@@ -33,7 +33,7 @@ const LabelContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: start;
-  gap: 1rem;
+  gap: 1.5rem;
 `;
 
 const MenuSection = styled.div`
