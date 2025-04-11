@@ -26,7 +26,7 @@ export default function Footer() {
         <S.LabelContainer>
           <FooterLabel
             name='Email'
-            description='deepdive@mail.com'
+            description='cocomuteam@gmail.com'
           />
           <FooterLabel
             name='TEL'
