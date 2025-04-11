@@ -31,9 +31,10 @@ const LogoImg = styled.img`
 const LabelContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: start;
-  gap: 1.5rem;
+
+  gap: 1rem;
 `;
 
 const MenuSection = styled.div`

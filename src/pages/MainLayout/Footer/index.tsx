@@ -28,10 +28,6 @@ export default function Footer() {
             name='Email'
             description='cocomuteam@gmail.com'
           />
-          <FooterLabel
-            name='TEL'
-            description='010-XXXX-XXXX'
-          />
           <FooterLabel name='© 2025 deepdive-cocomu. MIT License.' />
         </S.LabelContainer>
       </S.InfoSection>
