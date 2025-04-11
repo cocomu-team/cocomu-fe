@@ -11,7 +11,7 @@ import InfiniteScrollSentinel from '@components/_common/molecules/InfiniteScroll
 import SpaceCard from '@components/Space/SpaceCard';
 import SpaceFilterTab from '@pages/Space/SpaceList/SpaceFilterTab';
 
-import { SPACE_STATUS_MAP_ID } from '@constants/common/ui';
+import { SPACE_STATUS_MAP_ID } from '@constants/common/option';
 import { SpaceData } from '@customTypes/space';
 
 import S from './style';

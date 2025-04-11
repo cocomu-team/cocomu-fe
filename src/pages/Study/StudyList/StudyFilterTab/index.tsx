@@ -1,4 +1,4 @@
-import { ACCESS_STATUS } from '@constants/common/ui';
+import { ACCESS_STATUS } from '@constants/common/option';
 
 import SelectDropdown from '@components/_common/molecules/SelectDropdown';
 import ToggleButton from '@components/_common/atoms/ToggleButton';

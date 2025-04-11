@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { ACCESS_STATUS } from '@constants/common/ui';
+import { ACCESS_STATUS } from '@constants/common/option';
 import { CreateStudyData, StudyFormData } from '@customTypes/study';
 
 import useCreateStudy from '@hooks/study/useCreateStudy';

@@ -2,7 +2,7 @@ import SelectDropdown from '@components/_common/molecules/SelectDropdown';
 import ToggleButton from '@components/_common/atoms/ToggleButton';
 import SearchInput from '@components/_common/atoms/SearchInput';
 import useGetStudyDetail from '@hooks/study/useGetStudyDetail';
-import { SPACE_STATUS } from '@constants/common/ui';
+import { SPACE_STATUS } from '@constants/common/option';
 import S from './style';
 
 interface Filters {
