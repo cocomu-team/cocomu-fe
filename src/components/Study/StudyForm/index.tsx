@@ -12,7 +12,7 @@ import {
   validateTotalUserCount,
 } from '@utils/validators/studyValidators';
 
-import { ACCESS_STATUS } from '@constants/common/ui';
+import { ACCESS_STATUS } from '@constants/common/option';
 
 import { StudyFormData } from '@customTypes/study';
 

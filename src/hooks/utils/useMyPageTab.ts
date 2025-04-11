@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { ROUTES } from '@constants/path';
-import { MYPAGE_TAB } from '@constants/common/ui';
+import { MYPAGE_TAB } from '@constants/common/option';
 
 export default function useMyPageTab(userId: string) {
   const location = useLocation();

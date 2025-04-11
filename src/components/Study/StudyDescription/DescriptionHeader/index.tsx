@@ -8,7 +8,7 @@ import Icon from '@components/_common/atoms/Icon';
 import Button from '@components/_common/atoms/Button';
 import DropdownItem from '@components/_common/atoms/DropdownItem';
 
-import { STUDY_EDIT_DROPDOWN_LABELS } from '@constants/common/ui';
+import { STUDY_EDIT_DROPDOWN_LABELS } from '@constants/common/option';
 import { ROUTES } from '@constants/path';
 import { UserData } from '@customTypes/user';
 import { useModalStore } from '@stores/useModalStore';

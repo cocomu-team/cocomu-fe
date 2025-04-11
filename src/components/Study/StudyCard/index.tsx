@@ -2,7 +2,7 @@ import { BsPerson } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 
 import { ROUTES } from '@constants/path';
-import { ACCESS_STATUS_MAP } from '@constants/common/ui';
+import { ACCESS_STATUS_MAP } from '@constants/common/option';
 
 import { StudyData } from '@customTypes/study';
 
