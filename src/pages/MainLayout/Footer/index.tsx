@@ -22,6 +22,7 @@ export default function Footer() {
 
   const logoClick = () => {
     navigate('/');
+    scrollToTop();
   };
 
   return (
@@ -30,10 +31,7 @@ export default function Footer() {
         <S.LogoImg
           src={LOGO_IMAGE}
           alt='Logo'
-          onClick={() => {
-            logoClick();
-            scrollToTop();
-          }}
+          onClick={logoClick}
         />
         <S.LabelContainer>
           <FooterLabel
