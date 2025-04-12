@@ -9,7 +9,11 @@ export default function ErrorPage() {
   const navigate = useNavigate();
 
   const handleNavigate = (path: string | number) => {
-    navigate(`${path}`);
+    if (Number(path) === -1) {
+      navigate(-1);
+    } else {
+      navigate(`${path}`);
+    }
   };
 
   return (
