@@ -17,15 +17,16 @@ export default function ErrorPage() {
       <img
         src={ERROR_IMAGE}
         alt='에러이미지'
+        width='500px'
       />
-      <div>
+      <S.IconButtonContainer>
         <IconButton
           onClick={handleNavigate}
           content='이전 페이지로 돌아가기'
         >
           <BsArrowLeft />
         </IconButton>
-      </div>
+      </S.IconButtonContainer>
     </S.ErrorContainer>
   );
 }

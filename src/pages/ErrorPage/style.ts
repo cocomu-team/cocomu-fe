@@ -9,8 +9,17 @@ const ErrorContainer = styled.div`
   height: 100vh;
 `;
 
+const IconButtonContainer = styled.div`
+  transform: scale(1.5);
+
+  > div {
+    transition: 0.2s all ease-in-out;
+  }
+`;
+
 const S = {
   ErrorContainer,
+  IconButtonContainer,
 };
 
 export default S;
