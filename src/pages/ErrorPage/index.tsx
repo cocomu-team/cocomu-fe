@@ -8,8 +8,8 @@ import S from './style';
 export default function ErrorPage() {
   const navigate = useNavigate();
 
-  const handleNavigate = () => {
-    navigate(-1);
+  const handleNavigate = (path: string | number) => {
+    navigate(`${path}`);
   };
 
   return (
@@ -21,8 +21,8 @@ export default function ErrorPage() {
       />
       <S.IconButtonContainer>
         <IconButton
-          onClick={handleNavigate}
-          content='이전 페이지로 돌아가기'
+          onClick={() => handleNavigate('/')}
+          content='메인 페이지로 이동하기'
         >
           <BsArrowLeft />
         </IconButton>
