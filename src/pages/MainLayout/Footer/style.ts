@@ -26,6 +26,7 @@ const LogoImg = styled.img`
   width: 12rem;
   object-fit: contain;
   align-items: center;
+  cursor: pointer;
 `;
 
 const LabelContainer = styled.div`

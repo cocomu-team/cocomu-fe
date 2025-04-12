@@ -1,9 +1,13 @@
 import FooterLabel from '@pages/MainLayout/Footer/FooterLabel';
 import { LOGO_IMAGE } from '@constants/common/image';
 import { MENU_LIST } from '@constants/common/option';
+import { useNavigate } from 'react-router-dom';
+import { scrollToTop } from '../../../utils/scrollToTop';
 import S from './style';
 
 export default function Footer() {
+  const navigate = useNavigate();
+
   const handleMenuClick = (index: number) => {
     if (index === 0) {
       /* console.log('이용약관 작성 중...'); */
@@ -16,12 +20,20 @@ export default function Footer() {
     }
   };
 
+  const logoClick = () => {
+    navigate('/');
+  };
+
   return (
     <S.Container>
       <S.InfoSection>
         <S.LogoImg
           src={LOGO_IMAGE}
           alt='Logo'
+          onClick={() => {
+            logoClick();
+            scrollToTop();
+          }}
         />
         <S.LabelContainer>
           <FooterLabel
