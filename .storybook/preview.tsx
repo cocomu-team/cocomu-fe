@@ -1,10 +1,13 @@
 import type { Preview } from '@storybook/react';
-import { ThemeProvider } from '@emotion/react';
+import { Global, ThemeProvider } from '@emotion/react';
 import { theme } from '../src/styles/theme';
 import { worker } from '../src/mocks/browser';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import React from 'react';
 import { useToastStore } from '@stores/useToastStore';
+import globalStyles from '@styles/globalStyles';
+import ToastList from '@components/_common/molecules/ToastList';
+import BaseModal from '@components/Modal/BaseModal';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -56,6 +59,9 @@ const preview: Preview = {
     (Story) => (
       <QueryClientProvider client={queryClient}>
         <ThemeProvider theme={theme}>
+          <Global styles={globalStyles()} />
+          <ToastList />
+          <BaseModal />
           <Story />
         </ThemeProvider>
       </QueryClientProvider>
