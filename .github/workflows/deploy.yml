@@ -38,3 +38,24 @@ jobs:
           aws cloudfront create-invalidation \
             --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
             --paths "/*"
+
+      - name: Send success message to Discord
+        if: success()
+        uses: Ilshidur/action-discord@master
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          message: |
+            ✅ **[배포 성공]**
+            S3 + CloudFront 배포가 완료되었습니다. 🎉
+            (브랜치: ${{ github.ref_name }}, 커밋: ${{ github.sha }})
+
+      - name: Send failure message to Discord
+        if: failure()
+        uses: Ilshidur/action-discord@master
+        with:
+          webhook: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          message: |
+            ❌ **[배포 실패]**
+            오류가 발생해 배포에 실패했습니다. 🔥
+            커밋: ${{ github.sha }}  
+            로그를 확인해주세요 👉 ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
