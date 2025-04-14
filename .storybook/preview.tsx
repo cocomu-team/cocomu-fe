@@ -2,15 +2,29 @@ import type { Preview } from '@storybook/react';
 import { ThemeProvider } from '@emotion/react';
 import { theme } from '../src/styles/theme';
 import { worker } from '../src/mocks/browser';
+import { QueryClientProvider } from '@tanstack/react-query';
+import React from 'react';
 
-if (import.meta.env.MODE === 'development') {
-  worker.start({
-    serviceWorker: {
-      url: '/mockServiceWorker.js',
-    },
-    onUnhandledRequest: 'bypass',
-  });
-}
+const callMsw = (Story: any) => {
+  React.useEffect(() => {
+    if (import.meta.env.MODE === 'development') {
+      worker.start({
+        serviceWorker: {
+          url: '/mockServiceWorker.js',
+        },
+        onUnhandledRequest: 'bypass',
+      });
+    }
+
+    return () => {
+      if (import.meta.env.MODE === 'development') {
+        worker.stop();
+      }
+    };
+  }, []);
+
+  return <Story />;
+};
 
 const preview: Preview = {
   parameters: {
@@ -23,10 +37,13 @@ const preview: Preview = {
   },
 
   decorators: [
+    callMsw,
     (Story) => (
-      <ThemeProvider theme={theme}>
-        <Story />
-      </ThemeProvider>
+      <QueryClientProvider client={queryClient}>
+        <ThemeProvider theme={theme}>
+          <Story />
+        </ThemeProvider>
+      </QueryClientProvider>
     ),
   ],
 };
