@@ -2,8 +2,23 @@ import type { Preview } from '@storybook/react';
 import { ThemeProvider } from '@emotion/react';
 import { theme } from '../src/styles/theme';
 import { worker } from '../src/mocks/browser';
-import { QueryClientProvider } from '@tanstack/react-query';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import React from 'react';
+import { useToastStore } from '@stores/useToastStore';
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      throwOnError: true,
+      retry: 0,
+    },
+    mutations: {
+      onError: (error) => {
+        useToastStore.getState().error(error.message);
+      },
+    },
+  },
+});
 
 const callMsw = (Story: any) => {
   React.useEffect(() => {
