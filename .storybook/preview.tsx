@@ -1,9 +1,10 @@
+import React from 'react';
 import type { Preview } from '@storybook/react';
 import { Global, ThemeProvider } from '@emotion/react';
-import { theme } from '../src/styles/theme';
-import { worker } from '../src/mocks/browser';
+import { theme } from '@styles/theme';
+import { worker } from '@mocks/browser';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import React from 'react';
+
 import { useToastStore } from '@stores/useToastStore';
 import globalStyles from '@styles/globalStyles';
 import ToastList from '@components/_common/molecules/ToastList';
