@@ -1,62 +1,62 @@
 {
-  compilerOptions: {
-    types: [
+  "compilerOptions": {
+    "types": [
       "vite/client"
     ],
-    allowJs: true,
-    esModuleInterop: true,
-    allowSyntheticDefaultImports: true,
-    forceConsistentCasingInFileNames: true,
-    target: 'ES2020',
-    useDefineForClassFields: true,
-    lib: [
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": [
       "ES2020",
       "DOM",
       "DOM.Iterable"
     ],
-    module: 'ESNext',
-    skipLibCheck: true,
-    moduleResolution: 'Node',
-    resolveJsonModule: true,
-    isolatedModules: false,
-    noEmit: true,
-    jsx: 'react-jsx',
-    baseUrl: './',
-    paths: {
-      '@api/*': [
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "baseUrl": "./",
+    "paths": {
+      "@api/*": [
         "src/api/*"
       ],
-      '@assets/*': [
+      "@assets/*": [
         "src/assets/*"
       ],
-      '@components/*': [
+      "@components/*": [
         "src/components/*"
       ],
-      '@constants/*': [
+      "@constants/*": [
         "src/constants/*"
       ],
-      '@hooks/*': [
+      "@hooks/*": [
         "src/hooks/*"
       ],
-      '@mocks/*': [
+      "@mocks/*": [
         "src/mocks/*"
       ],
-      '@pages/*': [
+      "@pages/*": [
         "src/pages/*"
       ],
-      '@router/*': [
+      "@router/*": [
         "src/router/*"
       ],
-      '@stores/*': [
+      "@stores/*": [
         "src/stores/*"
       ],
-      '@styles/*': [
+      "@styles/*": [
         "src/styles/*"
       ],
-      '@customTypes/*': [
+      "@customTypes/*": [
         "src/types/*"
       ],
-      '@utils/*': [
+      "@utils/*": [
         "src/utils/*"
       ]
     }
