@@ -1,12 +1,17 @@
 import FooterLabel from '@pages/MainLayout/Footer/FooterLabel';
 import { LOGO_IMAGE } from '@constants/common/image';
 import { MENU_LIST } from '@constants/common/option';
-import { useNavigate } from 'react-router-dom';
-import { scrollToTop } from '../../../utils/scrollToTop';
+import { useNavigateClick } from '@hooks/utils/useNavigateClick';
+import { scrollToTop } from '@utils/scrollToTop';
 import S from './style';
 
 export default function Footer() {
-  const navigate = useNavigate();
+  const navigateHome = useNavigateClick('/');
+
+  const logoClick = () => {
+    navigateHome();
+    scrollToTop();
+  };
 
   const handleMenuClick = (index: number) => {
     if (index === 0) {
@@ -18,11 +23,6 @@ export default function Footer() {
     } else {
       /* console.log('문의 게시판 개발 중...'); */
     }
-  };
-
-  const logoClick = () => {
-    navigate('/');
-    scrollToTop();
   };
 
   return (
