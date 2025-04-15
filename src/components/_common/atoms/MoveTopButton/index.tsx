@@ -1,14 +1,8 @@
 import { BsFillCaretUpFill } from 'react-icons/bs';
 import S from './style';
+import { scrollToTop } from '../../../../utils/scrollToTop';
 
 export default function MoveTopButton() {
-  const scrollToTop = (): void => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
-
   return (
     <S.ScrollButton onClick={scrollToTop}>
       <S.IconContainer>

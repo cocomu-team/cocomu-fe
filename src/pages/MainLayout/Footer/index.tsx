@@ -1,9 +1,18 @@
 import FooterLabel from '@pages/MainLayout/Footer/FooterLabel';
 import { LOGO_IMAGE } from '@constants/common/image';
 import { MENU_LIST } from '@constants/common/option';
+import { useNavigateClick } from '@hooks/utils/useNavigateClick';
+import { scrollToTop } from '@utils/scrollToTop';
 import S from './style';
 
 export default function Footer() {
+  const navigateHome = useNavigateClick('/');
+
+  const logoClick = () => {
+    navigateHome();
+    scrollToTop();
+  };
+
   const handleMenuClick = (index: number) => {
     if (index === 0) {
       /* console.log('이용약관 작성 중...'); */
@@ -22,15 +31,12 @@ export default function Footer() {
         <S.LogoImg
           src={LOGO_IMAGE}
           alt='Logo'
+          onClick={logoClick}
         />
         <S.LabelContainer>
           <FooterLabel
             name='Email'
-            description='deepdive@mail.com'
-          />
-          <FooterLabel
-            name='TEL'
-            description='010-XXXX-XXXX'
+            description='cocomuteam@gmail.com'
           />
           <FooterLabel name='© 2025 deepdive-cocomu. MIT License.' />
         </S.LabelContainer>
