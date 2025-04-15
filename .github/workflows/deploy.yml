@@ -58,10 +58,14 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
         with:
           args: |
-            ✅ **[배포 성공]**
-            S3 + CloudFront 배포가 완료되었습니다. 🎉  
-            브랜치: `${{ github.ref_name }}`  
-            커밋: `${{ github.sha }}`
+            🟢 **프론트 배포 성공!**
+
+            🎉 S3 + CloudFront 배포가 완료되었습니다!
+
+            📦 브랜치 : `${{ github.ref_name }}`
+            🔗 커밋   : `${{ github.sha }}`
+
+            🔍 [Actions 실행 로그 보기](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
 
       - name: Send failure message to Discord
         if: failure()
@@ -70,7 +74,11 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
         with:
           args: |
-            ❌ **[배포 실패]**
-            오류가 발생해 배포에 실패했습니다. 🔥  
-            커밋: `${{ github.sha }}`  
-            👉 [로그 확인](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
+            🔴 **프론트 배포 실패!**
+
+            ⚠️ S3 + CloudFront 배포 중 오류가 발생했습니다.
+
+            📦 브랜치 : `${{ github.ref_name }}`
+            🔗 커밋   : `${{ github.sha }}`
+
+            🚨 [오류 로그 확인하기](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})
