@@ -20,6 +20,13 @@ export default function StudyFilterTab({ filters, keyword, setFilters, setKeywor
 
   if (isLoading) return null;
 
+  const changeStudyFilters = <K extends keyof studyFilters>(key: K, value: studyFilters[K]) => {
+    setFilters((prev) => ({
+      ...prev,
+      [key]: value,
+    }));
+  };
+
   return (
     <S.FilterTabContainer>
       <S.DropdownWrapper>
@@ -27,47 +34,27 @@ export default function StudyFilterTab({ filters, keyword, setFilters, setKeywor
           items={[...ACCESS_STATUS]}
           description='전체'
           values={filters.status}
-          onSelect={(values) =>
-            setFilters((prev) => ({
-              ...prev,
-              status: values,
-            }))
-          }
+          onSelect={(values) => changeStudyFilters('status', values)}
         />
         <SelectDropdown
           items={data.languages}
           description='사용 언어'
           values={filters.languages}
-          onSelect={(values) =>
-            setFilters((prev) => ({
-              ...prev,
-              languages: values,
-            }))
-          }
+          onSelect={(values) => changeStudyFilters('languages', values)}
           isMultiSelect
         />
         <SelectDropdown
           items={data.workbooks}
           description='사용 플랫폼'
           values={filters.workbooks}
-          onSelect={(values) =>
-            setFilters((prev) => ({
-              ...prev,
-              workbooks: values,
-            }))
-          }
+          onSelect={(values) => changeStudyFilters('workbooks', values)}
           isMultiSelect
         />
         <ToggleButton
           size='md'
           shape='round'
           isActive={filters.joinable}
-          onToggle={(value) =>
-            setFilters((prev) => ({
-              ...prev,
-              joinable: value,
-            }))
-          }
+          onToggle={(value) => changeStudyFilters('joinable', value)}
         >
           참여 가능한 스터디 보기
         </ToggleButton>
@@ -76,12 +63,7 @@ export default function StudyFilterTab({ filters, keyword, setFilters, setKeywor
         placeholder='제목을 검색해주세요'
         value={keyword}
         onChange={setKeyword}
-        onSearch={() =>
-          setFilters((prev) => ({
-            ...prev,
-            keyword,
-          }))
-        }
+        onSearch={() => changeStudyFilters('keyword', keyword)}
       />
     </S.FilterTabContainer>
   );

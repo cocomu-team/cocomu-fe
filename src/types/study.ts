@@ -8,6 +8,7 @@ export interface studyFilters {
   languages: number[];
   workbooks: number[];
   joinable: boolean;
+  keyword: string;
 }
 
 export interface StudyData {
