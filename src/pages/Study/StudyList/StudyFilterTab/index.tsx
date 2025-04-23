@@ -10,12 +10,10 @@ import S from './style';
 
 interface FilterTabProps {
   filters: studyFilters;
-  keyword: string;
   setFilters: React.Dispatch<React.SetStateAction<studyFilters>>;
-  setKeyword: (keyword: string) => void;
 }
 
-export default function StudyFilterTab({ filters, keyword, setFilters, setKeyword }: FilterTabProps) {
+export default function StudyFilterTab({ filters, setFilters }: FilterTabProps) {
   const { data, isLoading } = useGetFilterOptions();
 
   if (isLoading) return null;
@@ -61,9 +59,9 @@ export default function StudyFilterTab({ filters, keyword, setFilters, setKeywor
       </S.DropdownWrapper>
       <SearchInput
         placeholder='제목을 검색해주세요'
-        value={keyword}
-        onChange={setKeyword}
-        onSearch={() => changeStudyFilters('keyword', keyword)}
+        value={filters.keyword}
+        onChange={(value) => changeStudyFilters('keyword', value)}
+        onSearch={() => changeStudyFilters('keyword', filters.keyword)}
       />
     </S.FilterTabContainer>
   );
