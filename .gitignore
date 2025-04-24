@@ -24,5 +24,5 @@ dist-ssr
 *.sln
 *.sw?
 tsconfig.tsbuildinfo
-
 *storybook.log
+storybook-static
