@@ -14,6 +14,7 @@ const config: StorybookConfig = {
     '@storybook/experimental-addon-test',
     '@storybook/addon-themes',
     '@storybook/addon-interactions',
+    '@storybook/addon-ally',
   ],
   framework: {
     name: '@storybook/react-vite',
