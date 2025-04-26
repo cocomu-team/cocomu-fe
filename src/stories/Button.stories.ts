@@ -55,14 +55,39 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const White: Story = {
   args: {
     children: '버튼',
     onClick: fn(),
     type: 'button',
     size: 'md',
-    color: 'primary',
+    color: 'white',
     shape: 'default',
+    borderColor: 'triadic',
+  },
+};
+
+export const LargePrimary: Story = {
+  args: {
+    ...White.args,
+    color: 'primary',
+    size: 'lg',
+    borderColor: 'primary',
+  },
+};
+
+export const SmallTriadic: Story = {
+  args: {
+    ...White.args,
+    color: 'triadic',
+    size: 'sm',
+  },
+};
+
+export const RoundedButton: Story = {
+  args: {
+    ...White.args,
+    shape: 'round',
     borderColor: 'primary',
   },
 };
