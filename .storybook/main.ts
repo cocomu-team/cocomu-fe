@@ -7,14 +7,13 @@ const config: StorybookConfig = {
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-links',
-    '@storybook/addon-interactions',
     '@storybook/addon-onboarding',
     '@storybook/addon-msw',
     '@chromatic-com/storybook',
     '@storybook/experimental-addon-test',
     '@storybook/addon-themes',
     '@storybook/addon-interactions',
-    '@storybook/addon-ally',
+    '@storybook/addon-a11y',
   ],
   framework: {
     name: '@storybook/react-vite',

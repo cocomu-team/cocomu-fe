@@ -47,18 +47,28 @@ const callMsw = (Story: any) => {
 
 const preview: Preview = {
   parameters: {
+    a11y: {
+      element: 'body',
+      config: {
+        rules: [
+          {
+            id: 'autocomplete-valid',
+            selector: '*:not([autocomplete="nope"])',
+          },
+          {
+            // Setting the enabled option to false will disable checks for this particular rule on all stories.
+            id: 'image-alt',
+            enabled: false,
+          },
+        ],
+      },
+      options: {},
+    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
-    },
-
-    a11y: {
-      // 'todo' - show a11y violations in the test UI only
-      // 'error' - fail CI on a11y violations
-      // 'off' - skip a11y checks entirely
-      test: 'todo',
     },
   },
 
