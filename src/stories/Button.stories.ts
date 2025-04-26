@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
+import { fn, userEvent, within } from '@storybook/test';
+import { expect } from '@storybook/jest';
 
 import Button from '@components/_common/atoms/Button';
 
@@ -89,5 +90,20 @@ export const RoundedButton: Story = {
     ...White.args,
     shape: 'round',
     borderColor: 'primary',
+  },
+};
+
+export const ClickInteraction: Story = {
+  args: {
+    ...White.args,
+    children: '클릭 테스트',
+    onClick: fn(),
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole('button');
+
+    await userEvent.click(button);
+    await expect(args.onClick).toHaveBeenCalled();
   },
 };
