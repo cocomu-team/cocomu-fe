@@ -3,6 +3,14 @@ import { UserData } from './user';
 
 export type StudyStatusData = 'PUBLIC' | 'PRIVATE';
 
+export interface studyFilters {
+  status: number[];
+  languages: number[];
+  workbooks: number[];
+  joinable: boolean;
+  keyword: string;
+}
+
 export interface StudyData {
   id: number;
   joinable: boolean;

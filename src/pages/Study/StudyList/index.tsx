@@ -40,9 +40,7 @@ export default function StudyList() {
       <Slider images={BANNER_IMAGES} />
       <StudyFilterTab
         filters={filters}
-        keyword={keyword}
         setFilters={setFilters}
-        setKeyword={setKeyword}
       />
       {isLoading ? (
         <Loading />
@@ -62,7 +60,12 @@ export default function StudyList() {
               <PageButton
                 totalPage={Math.ceil(data.totalStudyCount / STUDY_PAGE_SIZE)}
                 currentPage={filters.page}
-                setPage={(page) => setFilters((prev) => ({ ...prev, page }))}
+                setPage={(page) =>
+                  setFilters((prev) => ({
+                    ...prev,
+                    page,
+                  }))
+                }
               />
             </S.Footer>
           )}

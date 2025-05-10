@@ -9,6 +9,7 @@ const Container = styled.div`
   background-color: ${({ theme }) => theme.color.gray[300]};
 
   padding: 5rem 0;
+  gap: 20rem;
 `;
 
 const InfoSection = styled.div`
@@ -24,13 +25,16 @@ const InfoSection = styled.div`
 const LogoImg = styled.img`
   width: 12rem;
   object-fit: contain;
+  align-items: center;
+  cursor: pointer;
 `;
 
 const LabelContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: start;
+
   gap: 1rem;
 `;
 
